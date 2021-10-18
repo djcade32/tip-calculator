@@ -1,12 +1,15 @@
 import "./Input.css";
-import inputImg from "../../../images/icon-dollar.svg";
 
-function Input() {
+function Input(props) {
   return (
     <div className="input-wraper">
-      <label className="input-label">Bill</label>
-      <img src={inputImg} alt="" />
-      <input className="input" type="text" />
+      <label className="input-label">{props.inputLabel}</label>
+      <input
+        style={{ backgroundImage: `url(${props.backgroundImage})` }}
+        className="input"
+        type="text"
+        value="142.55"
+      />
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.select-tip-wrapper {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.select-tip-header {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 1rem;
+}
+
+.select-tip-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}

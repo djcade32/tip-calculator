@@ -1,19 +1,11 @@
-.input-label {
-  color: var(--dark-grayish-cyan);
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.input {
+.custom-option-input {
   color: var(--very-dark-cyan);
   background-color: var(--input-bg-color);
-  background-repeat: no-repeat;
-  background-position: 6% 50%;
-  padding-left: 2.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   padding-right: 1rem;
+  padding-left: 1rem;
   text-align: right;
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -23,6 +15,10 @@
   caret-color: var(--strong-cyan);
 }
 
-.input:focus {
+.custom-option-input::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+.custom-option-input:focus {
   outline-color: var(--strong-cyan);
 }

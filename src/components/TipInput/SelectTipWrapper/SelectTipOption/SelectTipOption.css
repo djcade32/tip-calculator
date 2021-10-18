@@ -1,0 +1,16 @@
+.select-tip-option {
+  color: var(--card-bg-color);
+  background-color: var(--very-dark-cyan);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: 600;
+  width: 100%;
+}
+
+.select-tip-option:hover {
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
