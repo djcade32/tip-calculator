@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --button-hover-state: hsl(184, 14%, 56%);
+  --body-bg-color: hsl(185, 41%, 84%);
+  --input-bg-color: hsl(189, 41%, 97%);
+  --card-bg-color: hsl(0, 0%, 100%);
+
+  /* Typography */
+
+  --font-size: 1.5rem;
+  --font-family: "Space Mono";
+}
