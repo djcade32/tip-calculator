@@ -26,3 +26,7 @@
 .input:focus {
   outline-color: var(--body-bg-color);
 }
+
+.input::placeholder {
+  color: var(--button-hover-state);
+}
