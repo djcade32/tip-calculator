@@ -10,6 +10,11 @@
   width: 100%;
 }
 
+.selected {
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
+
 .select-tip-option:hover {
   color: var(--very-dark-cyan);
   background-color: var(--body-bg-color);
