@@ -6,7 +6,7 @@ function App() {
   return (
     <Card>
       <TipInput />
-      <TipResults></TipResults>
+      <TipResults />
     </Card>
   );
 }

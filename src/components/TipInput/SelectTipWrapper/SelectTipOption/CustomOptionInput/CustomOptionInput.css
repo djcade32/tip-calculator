@@ -20,5 +20,5 @@
 }
 
 .custom-option-input:focus {
-  outline-color: var(--strong-cyan);
+  outline-color: var(--body-bg-color);
 }

@@ -1,0 +1,19 @@
+.tip-results {
+  margin-top: 2.5rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 62.188rem) {
+  .tip-results {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 3.5rem;
+    align-self: stretch;
+    margin-top: 0;
+  }
+}

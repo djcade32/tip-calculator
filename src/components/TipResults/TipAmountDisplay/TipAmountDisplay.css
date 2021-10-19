@@ -1,0 +1,19 @@
+.tip-amount-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-amount-title {
+  color: var(--card-bg-color);
+  margin-bottom: 0.5rem;
+}
+
+.tip-amount-per-person {
+  color: var(--button-hover-state);
+}
+
+.tip-amount-price {
+  color: var(--strong-cyan);
+  align-self: center;
+  font-size: 2rem;
+}

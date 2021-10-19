@@ -1,0 +1,25 @@
+.reset-button {
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  margin-top: 1.75rem;
+}
+
+.reset-button:hover {
+  background-color: var(--body-bg-color);
+}
+
+@media (min-width: 62.188rem) {
+  .reset-button {
+    margin-top: 12rem;
+  }
+}

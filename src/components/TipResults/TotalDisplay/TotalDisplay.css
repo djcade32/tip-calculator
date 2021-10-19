@@ -1,0 +1,20 @@
+.total-display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+}
+
+.total-title {
+  color: var(--card-bg-color);
+  margin-bottom: 0.5rem;
+}
+
+.total-per-person {
+  color: var(--button-hover-state);
+}
+
+.total-price {
+  color: var(--strong-cyan);
+  align-self: center;
+  font-size: 2rem;
+}
