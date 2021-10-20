@@ -4,17 +4,25 @@ import { useDispatch } from "react-redux";
 import { billActions } from "../../../store/bill";
 
 function Input(props) {
-  // var formatter = new Intl.NumberFormat("en-US", {
-  //   style: "currency",
-  //   currency: "USD",
-  //   signDisplay: "never",
-  // });
-
   const dispatch = useDispatch();
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(0);
+
+  var formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    signDisplay: "never",
+  });
+
+  function regex(input) {
+    let regex = /\$[0-9]+,\d\d\d\.\d\d55/i;
+    let arr = regex.exec(input);
+    return arr;
+  }
 
   function handleInput(event) {
+    console.log(regex(event.target.value));
     setInput(event.target.value);
+    console.log(event.target.value);
     if (props.inputLabel === "Bill") {
       dispatch(billActions.setBillAmount(event.target.value));
     } else {
@@ -31,7 +39,7 @@ function Input(props) {
         className="input"
         type="text"
         placeholder="0"
-        value={input}
+        value={formatter.format(input)}
       />
     </div>
   );
