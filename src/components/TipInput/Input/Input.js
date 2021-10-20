@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Input.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { billActions } from "../../../store/bill";
 
 function Input(props) {
@@ -15,7 +15,11 @@ function Input(props) {
 
   function handleInput(event) {
     setInput(event.target.value);
-    dispatch(billActions.setBillAmount(event.target.value));
+    if (props.inputLabel === "Bill") {
+      dispatch(billActions.setBillAmount(event.target.value));
+    } else {
+      dispatch(billActions.setPersonAmount(event.target.value));
+    }
   }
 
   return (

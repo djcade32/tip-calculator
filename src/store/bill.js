@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialBillState = { billAmount: "" };
+const initialBillState = { billAmount: "", personAmount: 0 };
 
 const billSlice = createSlice({
   name: "bill",
@@ -8,6 +8,9 @@ const billSlice = createSlice({
   reducers: {
     setBillAmount(state, action) {
       state.billAmount = action.payload;
+    },
+    setPersonAmount(state, action) {
+      state.personAmount = action.payload;
     },
   },
 });

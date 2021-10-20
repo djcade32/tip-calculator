@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialSelectedTipOptionState = {
-  selectedTipOption: "",
+  selectedTipOption: null,
   isChange: false,
 };
 

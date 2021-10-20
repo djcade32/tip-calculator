@@ -1,8 +1,22 @@
 import "./CustomOptionInput.css";
 
-function CustomOptionInput() {
+function CustomOptionInput(props) {
+  function handleInput(event) {
+    props.selectedOption(event);
+  }
+
+  function handleOnFocus() {
+    props.selectedOption(null);
+  }
+
   return (
-    <input type="text" className="custom-option-input" placeholder="Custom" />
+    <input
+      onChange={handleInput}
+      onFocus={handleOnFocus}
+      type="text"
+      className="custom-option-input"
+      placeholder="Custom"
+    />
   );
 }
 
