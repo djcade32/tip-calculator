@@ -3,6 +3,7 @@ import TipAmountDisplay from "./TipAmountDisplay/TipAmountDisplay";
 import TotalDisplay from "./TotalDisplay/TotalDisplay";
 import ResetButton from "./ResetButton/ResetButton";
 import { useDispatch, useSelector } from "react-redux";
+import { billActions } from "../../store/bill";
 
 function TipResults() {
   const dispatch = useDispatch();
@@ -19,10 +20,7 @@ function TipResults() {
 
   function getTipTotal(tipOption, personAmount, billAmount) {
     if (personAmount > 0 && tipOption > 0) {
-      return (
-        (getTotalSplit(personAmount, billAmount) * (tipOption / 100)) /
-        personAmount
-      );
+      return (billAmount * (tipOption / 100)) / personAmount;
     }
     return 0;
   }
@@ -33,6 +31,13 @@ function TipResults() {
     }
     return 0;
   }
+
+  function handleReset() {
+    dispatch(billActions.setBillAmount(0));
+    dispatch(billActions.setPersonAmount(0));
+    dispatch(billActions.reset(true));
+  }
+
   return (
     <div className="tip-results">
       <TipAmountDisplay
@@ -43,7 +48,7 @@ function TipResults() {
       <TotalDisplay
         totalSplit={formatter.format(getTotalSplit(personAmount, billAmount))}
       />
-      <ResetButton />
+      <ResetButton onClick={handleReset} />
     </div>
   );
 }

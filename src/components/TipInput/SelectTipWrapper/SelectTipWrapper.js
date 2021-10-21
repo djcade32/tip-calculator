@@ -6,6 +6,7 @@ import { selectedTipOptionActions } from "../../../store/selected-tip-option";
 
 function SelectTipWrapper(props) {
   const dispatch = useDispatch();
+
   function selectedTipOption(event) {
     if (!event) {
       dispatch(selectedTipOptionActions.setTipOption(""));
@@ -13,6 +14,7 @@ function SelectTipWrapper(props) {
       dispatch(selectedTipOptionActions.setTipOption(event.target.value));
     }
   }
+
   return (
     <div className="select-tip-wrapper">
       <h1 className="select-tip-header">Select Tip %</h1>

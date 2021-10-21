@@ -7,17 +7,18 @@ function SelectTipOption(props) {
   const selectedTipOption = useSelector(
     (state) => state.selectedTipOption.selectedTipOption
   );
+  const isReset = useSelector((state) => state.bill.isReset);
 
   const [className, setClassName] = useState("select-tip-option");
 
   useEffect(() => {
-    if (props.option === selectedTipOption && isSelected) {
+    if (props.option === selectedTipOption && isSelected && !isReset) {
       setClassName("select-tip-option selected");
     } else {
       setIsSelected(false);
       setClassName("select-tip-option");
     }
-  }, [props.option, selectedTipOption, isSelected]);
+  }, [props.option, selectedTipOption, isSelected, isReset]);
 
   function handleOnClick(event) {
     setIsSelected(true);
